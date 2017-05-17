@@ -13,6 +13,7 @@
 		21636B681EBC05D400C4704E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21636B661EBC05D400C4704E /* Main.storyboard */; };
 		21636B6A1EBC05D400C4704E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21636B691EBC05D400C4704E /* Assets.xcassets */; };
 		21636B6D1EBC05D400C4704E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21636B6B1EBC05D400C4704E /* LaunchScreen.storyboard */; };
+		21636B761EBC076600C4704E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21636B751EBC076600C4704E /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		21636B691EBC05D400C4704E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21636B6C1EBC05D400C4704E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21636B6E1EBC05D500C4704E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21636B751EBC076600C4704E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21636B761EBC076600C4704E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 			children = (
 				21636B5C1EBC05D400C4704E /* MapView */,
 				21636B5B1EBC05D400C4704E /* Products */,
+				21636B741EBC076600C4704E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +81,14 @@
 				21636B5E1EBC05D400C4704E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21636B741EBC076600C4704E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21636B751EBC076600C4704E /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

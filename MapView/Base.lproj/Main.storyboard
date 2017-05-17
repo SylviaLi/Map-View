@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USf-7E-Bsy">
+                                <items>
+                                    <barButtonItem style="plain" id="fcx-zA-Yb4">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Ah1-RJ-AeA">
+                                            <rect key="frame" x="16" y="7" width="217" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Standard"/>
+                                                <segment title="Satelite"/>
+                                                <segment title="Hybrid"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="mapTypes:" destination="BYZ-38-t0r" eventType="valueChanged" id="vyS-tF-HBr"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="a1x-D8-D9w"/>
+                                    <barButtonItem title="Locate me" id="qcw-hw-I1b">
+                                        <connections>
+                                            <action selector="locateMe:" destination="BYZ-38-t0r" id="ykG-ma-UhJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Fb-Lw-Rov"/>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Fb-Lw-Rov" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2SI-u5-pbX"/>
+                            <constraint firstItem="USf-7E-Bsy" firstAttribute="top" secondItem="7Fb-Lw-Rov" secondAttribute="bottom" id="3Us-PF-12r"/>
+                            <constraint firstAttribute="trailing" secondItem="7Fb-Lw-Rov" secondAttribute="trailing" id="YPF-G4-U9Q"/>
+                            <constraint firstItem="USf-7E-Bsy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="m82-0v-cD0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="USf-7E-Bsy" secondAttribute="bottom" id="nxe-HM-szs"/>
+                            <constraint firstItem="7Fb-Lw-Rov" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rNH-Cb-hzM"/>
+                            <constraint firstAttribute="trailing" secondItem="USf-7E-Bsy" secondAttribute="trailing" id="t0U-qc-BMa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapview" destination="7Fb-Lw-Rov" id="yME-fr-iAH"/>
+                        <outlet property="segcontrol" destination="Ah1-RJ-AeA" id="eUk-8y-Ti1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
